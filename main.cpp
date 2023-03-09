@@ -8,9 +8,10 @@ int solution(std::vector<int> &v) {
         if (v[i] < 5 + i) {
             if (v[i] == -1) {
                 k++;
+                std::cout<<"skip door "<<i<<"\n";
                 continue;
             } else {
-//                std::cout<<"Boooom";
+                std::cout<<"Boooom";
                 return -1;
             }
         }
@@ -19,7 +20,7 @@ int solution(std::vector<int> &v) {
             takenTime = 5;
         } else takenTime += 5;
     }
-        std::cout << "We need "
+        std::cout << "\nWe need "
         << (k == v.size() ? no_expert - 1 : no_expert)<<" bomb experts";
 }
 
